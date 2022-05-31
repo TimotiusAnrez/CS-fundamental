@@ -86,6 +86,8 @@ print(x)
 
 ## Expressions
 
+Expressions is a more complex calculation
+
 because of the lack of mathematical symbols on computer keyboards we use "computer-speak" to express classic math operations
 
 ```
@@ -98,3 +100,67 @@ because of the lack of mathematical symbols on computer keyboards we use "comput
 ```
 
 exponentiation (raise to a power) looks different than in math
+
+### Order of Evaluation
+
+When we string operators together - Python must know which one to do first
+
+This is what we call operator precedence
+
+```
+-   () always in top priority
+
+-   ** second
+
+-   * , / , %  third
+
+-   + , - last priority
+
+always read left to right
+```
+
+## Types
+
+- in Python variables, literals, and constat have a type
+
+- Python knows the difference between an integer number and a string
+
+- Eg. "+" means addition if there is a number on the right side of it, and concatenante (adding character or string to existing strings) if the right side of "+" is a string or character
+
+### Types Matters
+
+```python
+eee = 'hello' + 'there'
+eee = eee + 1
+
+# will cause typeError 
+# reason being because python cannot convert 'int' object to str implicitly
+
+# Traceback error means force exit program because of an error
+```
+
+rules: 
+-   You Cannot add a number or integer to strings
+-   Python have a built in function called type(value)
+        -   type built in function will tell python what the value type is
+
+## Several Types of Numbers
+
+Numbers have two main types:
+    -   Integers
+        
+        Integers are whole numbers
+            ie: -14, -2, 0, 1, 100, 20020201
+
+    -   Floating Point Numbers
+
+        Float have decimal parts (percision)
+            ie: -2.5, 0.5, 1.8, 98.6 
+
+Other number types are variations on floats and integers
+
+### Type Conversions
+
+When you put an integer and floating point in an expression, the integer will implicitly converted to a float
+
+    -   You can control this via built-in functions int() and float()
